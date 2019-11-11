@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZIP Extractor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.1.6/dist/css/uikit.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/eva-icons@1.1.1/style/eva-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="uk-section">
+      <div class="uk-container">
+        <h1>ZIP Extractor</h1>
+        <p>
+          <label>
+            <span class="uk-button uk-button-primary">
+              <span class="eva eva-lg eva-plus-outline"></span>
+              Choose a file...
+            </span>
+            <input
+              class="uk-hidden"
+              type="file"
+              accept="application/zip"
+              data-js="input"
+            />
+          </label>
+        </p>
+        <ul class="uk-list uk-list-divider" data-js="list">
+          <template data-js="list-item-template">
+            <li class="uk-flex">
+              <span class="uk-flex-auto" data-js="filename">
+                {{ filename }}
+              </span>
+              <button
+                class="uk-button uk-button-primary uk-button-small"
+                type="button"
+                data-js="extract-button"
+              >
+                <span class="eva eva-lg eva-cloud-download-outline"></span>
+                Extract
+              </button>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
