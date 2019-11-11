@@ -8,16 +8,16 @@ module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
   output: {
     globalObject: 'self',
-    path: path.resolve(__dirname, './dist')
+    path: path.resolve(__dirname, './dist'),
   },
   plugins: [
     new CleanWebpackPlugin(),
     new WorkerPlugin(),
     new WasmPackPlugin({
-      crateDirectory: path.resolve(__dirname, './src/crate')
+      crateDirectory: path.resolve(__dirname, './src/crate'),
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/index.html')
-    })
-  ]
+      template: path.resolve(__dirname, './src/index.html'),
+    }),
+  ],
 };
